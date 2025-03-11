@@ -1,0 +1,349 @@
+body {
+    overscroll-behavior: none;
+    position: relative;
+        height: 100%;
+}
+
+.section{    
+        padding-top: 100px;   
+        min-height: calc(100vh - 100px);
+}
+.section-about{
+    padding-top: 100px;
+    height: 100%;
+    background-image: url("/bg-about.jpg");
+    object-fit: cover;
+}
+.form{
+    min-width: 400px;
+    max-width: 700px;
+}
+
+.backdrop{
+    background-color:#0000007d;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 20;
+    overflow-y: scroll;
+}
+.cart {
+    min-width: 450px;
+    min-height: 100vh;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top:0;
+    padding: 24px;
+}
+.mobile {
+    min-width: 450px;
+    min-height: 100vh;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 24px;
+}
+@media screen and (max-width:480px) {
+    .cart{
+        width: 100%;
+    }
+}
+.slick-prev, .slick-next{
+    background-color:rgb(163, 163, 185) !important;
+    border-radius: 50% !important;
+}
+.slick-prev{
+    visibility: hidden;
+}
+.slick-next {
+    visibility: hidden;
+}
+@media screen and (min-width:768px) {
+    .slick-prev {
+            visibility:visible;
+        }
+           .slick-next {
+               visibility: visible;
+           }
+}
+
+.slick-dots{
+    bottom: 0 !important;
+}
+.ingredient_card{
+    background-color: #6c757d;
+    width: 150px;
+    height: 120px;
+}
+.ingredient_card:hover{
+   border: 1px solid grey;
+}
+.ingredient_name{
+    font-size: 12px;
+    text-align: center;
+}
+@media screen and (min-width:768px) {
+    .ingredient_name {
+            font-size: 14px;
+        }
+}
+@media screen and (min-width:1440px) {
+    .ingredient_name {
+        font-size: 16px;
+    }
+}
+.dish_card {
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.dish_img{
+    width: 450px;
+    height: 450px;
+}
+@media screen and (min-width:768px) {
+    .dish_img {
+        width: 700px;
+        height: 700px;
+    }
+}
+@media screen and (min-width:1024px) {
+    .dish_img {
+        width: 450px;
+        height: 450px;
+    }
+}
+@media screen and (min-width:1440px) {
+    .dish_img {
+        width: 600px;
+        height: 600px;
+    }
+}
+.dish_card:hover .dish_ingredients{
+        bottom:70px;
+        opacity: 1;    
+}
+.dish_card:hover{
+    border: 1px solid grey;
+    transition: ease-in-out 0.3s;
+}
+.ingredients_img:hover{
+    scale: 120%;
+}
+.dish_ingredients, .dish_ingredients_card{
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+}
+.dish_card:hover .dish_ingredients_card {
+    bottom: 50px;
+    opacity: 1;
+    transition: ease-in-out 0.3s;
+}
+.card-title{
+    height: 50px;
+}
+.form-check-label:hover{
+    color:#198754;
+    scale: 110%;
+    transition: ease-in-out 0.3s;
+}
+.form-check-input:checked+.form-check-label {
+    color: #198754;
+    scale: 110%;
+}
+.form_login, .form_register {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.menu{
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu:hover{
+color: #198754;
+scale: 120%;
+
+}
+.current{
+    color: #198754;
+    scale: 110%;
+}
+.menu_footer{
+    text-decoration: none;
+    color: #6c757d;
+}
+.menu_footer:hover{
+    color: #198754;
+  }
+
+/* Hide the default checkbox */
+.custom-checkbox input {
+    opacity: 0;
+    position: absolute;
+}
+.custom-checkbox:hover{
+    color: #198754;
+}
+/* Create a custom checkbox */
+.custom-checkbox .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #9aa5a0;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Style the checkmark when the checkbox is checked */
+.custom-checkbox input:checked+.checkmark {
+    background-color: #198754;
+    /* Change background color when checked */
+    border-color: #198754;
+}
+.custom-checkbox input:checked+.svg {
+    border-color: #198754;
+    color:#198754;
+}
+/* Create the checkmark (hidden by default) */
+.custom-checkbox .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Show the checkmark when the checkbox is checked */
+.custom-checkbox input:checked+.checkmark::after {
+    display: block;
+}
+
+.svg{
+    border: 2px solid transparent;
+    padding: 0px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.svg:hover{
+    border-color: #198754;
+}
+.category_img{
+    width: 30px;
+    height: 30px;
+}
+@media screen and (min-width:768px) {
+    .category_img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;   
+}
+
+.background-container {  
+position: relative;
+    width: 100%;
+    height: calc(100vh - 210px);
+    overflow: hidden;
+}
+.background-container-home {
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+   height: 100vh;
+    overflow: hidden;
+}
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    max-width: 800px;
+}
+@media screen and (min-width:768px) {
+    .description{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width:1024px) {
+    .description {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:1440px) {
+    .description {
+        font-size: 24px;
+    }
+}
+
+.home_icon{
+    width: 30px;
+    height: 30px;
+    color: #198754;
+}
+.home_icon:hover{
+    scale:120%;
+    transition: ease-in-out 0.3s;
+}
+.button_panel{
+    border: none;
+    background-color: #fff;
+
+}
+.nav_icon:hover{
+    scale: 120%;
+    transition: ease-in-out 0.3s;
+}
+.nav_item{
+    color: #6c757d;
+    font-size:18px;
+    font-weight: 700;
+}
+.nav_item_current {
+    color:#198754;
+    font-size: 18px;
+    font-weight: 700;
+}
+.search_icon{
+    width: 25px;
+    height: 25px;
+    color:#198754;
+}
