@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { Suspense, useEffect, useState } from "react";
-import { getUser, isUserLoggedIn } from "./utils/AuthHelper.js";
+import { getUser, isUserLoggedIn } from "./utils/authHelper.js";
 
 const Menu = React.lazy(() => import("./components/pages/Menu"));
 const Login = React.lazy(() => import("./components/pages/Login"));

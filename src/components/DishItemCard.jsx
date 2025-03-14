@@ -1,4 +1,4 @@
-import apiConfig from "../config/apiConfig";
+import apiConfig from "../config/apiConfig.js";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import { useAppContextOrder } from "./context";

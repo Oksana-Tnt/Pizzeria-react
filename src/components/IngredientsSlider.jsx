@@ -1,4 +1,4 @@
-import apiConfig from "../config/apiConfig";
+import apiConfig from "../config/apiConfig.js";
 const IngredientsSlider = ({ ingredients }) => {
   return (
     <div className="d-flex gap-2 flex-wrap justify-content-center justify-content-lg-start">

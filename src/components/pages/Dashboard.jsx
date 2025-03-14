@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "../../utils/authHelper.js";
 import ModalWrapper from "../ModalWrapper";
 import DishForm from "../DishForm";
 import DishItemTable from "../DishItemTable";

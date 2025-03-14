@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb, getUser } from "../../utils/authHelper";
+import { fetchFromDb, getUser } from "../../utils/authHelper.js";
 import SliderOrders from "../SliderOrders";
 
 const Orders = () => {

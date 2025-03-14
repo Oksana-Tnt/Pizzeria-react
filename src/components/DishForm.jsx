@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb, pushToDb } from "../utils/authHelper";
+import { fetchFromDb, pushToDb } from "../utils/authHelper.js";
 import { toast } from "react-toastify";
 
 const DishForm = ({

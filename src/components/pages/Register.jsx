@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { pushToDb } from "../../utils/authHelper";
+import { pushToDb } from "../../utils/authHelper.js";
 
 const Register = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { logout } from "../utils/authHelper";
+import { logout } from "../utils/authHelper.js";
 
 const Logout = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();

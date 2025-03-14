@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import apiConfig from "../config/apiConfig";
-import { deleteFromDb, fetchFromDb } from "../utils/authHelper";
+import { deleteFromDb, fetchFromDb } from "../utils/authHelper.js";
 import { toast } from "react-toastify";
 
 const DeleteForm = ({ itemId, onDeleteItem, setModalShowDelete, action }) => {

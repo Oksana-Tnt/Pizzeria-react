@@ -1,4 +1,4 @@
-import { fetchFromDb, getUser, pushToDb } from "../utils/authHelper";
+import { fetchFromDb, getUser, pushToDb } from "../utils/authHelper.js";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { useAppContextOrder } from "./context";
 import { useEffect, useState } from "react";

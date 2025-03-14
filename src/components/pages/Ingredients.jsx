@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import IngredientForm from "../IngredientForm";
 import ModalWrapper from "../ModalWrapper";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "../../utils/authHelper.js";
 import IngredientsItemTable from "../IngredientsItemTable";
 
 const Ingredients = () => {

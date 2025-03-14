@@ -1,4 +1,4 @@
-import apiConfig from "../config/apiConfig";
+import apiConfig from "../config/apiConfig.js";
 
 const CategoryList = ({ data, handleCheckboxChange }) => {
   return (

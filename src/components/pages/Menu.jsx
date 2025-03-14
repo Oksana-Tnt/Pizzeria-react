@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "../../utils/authHelper.js";
 import FilterList from "../FilterList";
 import DishItemCard from "../DishItemCard";
 import CategoryList from "../CategoryList";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import apiConfig from "../config/apiConfig";
-import { fetchFromDb } from "../utils/authHelper";
+import { fetchFromDb } from "../utils/authHelper.js";
 import IngredientCarousel from "./IngredientCarousel";
 
 const DishDetails = ({ dish }) => {
