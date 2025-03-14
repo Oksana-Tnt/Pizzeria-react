@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb, getUser } from "../../utils/authHelper.js";
 import SliderOrders from "../SliderOrders";
+import { fetchFromDb, getUser } from "../../utils/authHelper";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);

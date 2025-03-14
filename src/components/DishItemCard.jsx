@@ -1,9 +1,9 @@
-import apiConfig from "../config/apiConfig.js";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import { useAppContextOrder } from "./context";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import apiConfig from "../config/apiConfig";
 
 const DishItemCard = ({ dish }) => {
   const { orders, addToCard, removeFromCard, isOrder } = useAppContextOrder();

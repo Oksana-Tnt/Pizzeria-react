@@ -1,8 +1,8 @@
 import { FiEdit } from "react-icons/fi";
-import apiConfig from "../config/apiConfig.js";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import ModalWrapper from "./ModalWrapper";
 import DeleteForm from "./DeleteForm";
+import apiConfig from "../config/apiConfig";
 
 const CategoriesItemTable = ({
   categories,

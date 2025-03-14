@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb } from "../../utils/authHelper.js";
 import ModalWrapper from "../ModalWrapper";
 import DishForm from "../DishForm";
 import DishItemTable from "../DishItemTable";
+import { fetchFromDb } from "../../utils/authHelper";
 
 const Dashboard = () => {
   const [dishes, setDishes] = useState([]);

@@ -1,10 +1,10 @@
+import apiConfig from "../config/apiConfig";
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
-import apiConfig from "../config/apiConfig.js";
 
 const IngredientCarousel = (props) => {
   const { slides, options } = props;

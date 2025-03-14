@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import IngredientForm from "../IngredientForm";
 import ModalWrapper from "../ModalWrapper";
-import { fetchFromDb } from "../../utils/authHelper.js";
 import IngredientsItemTable from "../IngredientsItemTable";
+import { fetchFromDb } from "../../utils/authHelper";
 
 const Ingredients = () => {
   const [modalShowIngredient, setModalShowIngredient] = useState(false);

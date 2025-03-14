@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
 import DishDetails from "../DishDetails";
 import { useEffect, useState } from "react";
-import { fetchFromDb } from "../../utils/authHelper.js";
 import DishSlider from "../DishSlider";
 import Panel from "../Panel";
+import { fetchFromDb } from "../../utils/authHelper";
 
 const Details = () => {
   const { id } = useParams();

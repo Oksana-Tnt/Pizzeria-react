@@ -1,6 +1,6 @@
 import Slider from "react-slick";
-import apiConfig from "../config/apiConfig.js";
 import { Link } from "react-router-dom";
+import apiConfig from "../config/apiConfig";
 
 const DishSlider = ({ dishes }) => {
   var settings = {
