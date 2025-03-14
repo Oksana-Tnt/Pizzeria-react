@@ -1,6 +1,6 @@
 const apiConfig = {
-    baseUrl: 'http://webrestaurant.online/api',
-    imgUrl: 'http://webrestaurant.online/storage/app/public'
+    baseUrl: 'https://webrestaurant.online/api',
+    imgUrl: 'https://webrestaurant.online/storage/app/public'
 };
 
 
