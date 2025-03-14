@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
-import { sliders } from "../utils/constants";
+import { sliders } from "@utils/constants";
 
 const HomeSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -1,6 +1,6 @@
+import { fetchFromDb, pushToDb } from "@utils/authHelper";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { fetchFromDb, pushToDb } from "../utils/authHelper";
 
 const DishForm = ({
   setModalShow,

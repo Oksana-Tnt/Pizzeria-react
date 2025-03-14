@@ -4,7 +4,7 @@ import DishItemCard from "../DishItemCard";
 import CategoryList from "../CategoryList";
 import SearchComponent from "../SearchComponent";
 import { useAppContextSearch } from "../context";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "@utils/authHelper";
 
 const Menu = () => {
   const [categoriesWithDishes, setCategoriesWithDishes] = useState([]);

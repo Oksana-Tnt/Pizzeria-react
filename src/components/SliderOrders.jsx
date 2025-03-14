@@ -1,5 +1,5 @@
+import apiConfig from "config/apiConfig";
 import Slider from "react-slick";
-import apiConfig from "../config/apiConfig";
 
 const SliderOrders = ({ items }) => {
   var settings = {

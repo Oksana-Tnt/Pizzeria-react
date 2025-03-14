@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ModalWrapper from "../ModalWrapper";
 import DishForm from "../DishForm";
 import DishItemTable from "../DishItemTable";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "@utils/authHelper";
 
 const Dashboard = () => {
   const [dishes, setDishes] = useState([]);

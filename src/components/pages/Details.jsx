@@ -3,7 +3,7 @@ import DishDetails from "../DishDetails";
 import { useEffect, useState } from "react";
 import DishSlider from "../DishSlider";
 import Panel from "../Panel";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "@utils/authHelper";
 
 const Details = () => {
   const { id } = useParams();

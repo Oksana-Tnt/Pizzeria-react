@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import CartItem from "./CartItem";
 import { toast } from "react-toastify";
 import CartImg from "/empty-cart.png";
-import { fetchFromDb, getUser, pushToDb } from "../utils/authHelper";
+import { fetchFromDb, getUser, pushToDb } from "@utils/authHelper";
 
 const Cart = ({ setShowCart }) => {
   const { orders, setOrder } = useAppContextOrder();

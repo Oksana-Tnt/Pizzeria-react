@@ -1,6 +1,6 @@
+import { pushToDb } from "@utils/authHelper";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { pushToDb } from "../../utils/authHelper";
 
 const Login = ({ stateCallback, setCurrentUser }) => {
   const navigate = useNavigate();

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ModalWrapper from "../ModalWrapper";
 import CategoryForm from "../CategoryForm";
 import CategoriesItemTable from "../CategoriesItemTable";
-import { fetchFromDb } from "../../utils/authHelper";
+import { fetchFromDb } from "@utils/authHelper";
 
 const Categories = () => {
   const [modalShowCategory, setModalShowCategory] = useState(false);
