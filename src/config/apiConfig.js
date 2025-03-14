@@ -1,6 +1,6 @@
 const apiConfig = {
-    baseUrl: 'http://api-crud.test/api',
-    imgUrl: 'http://api-crud.test/storage'
+    baseUrl: 'http://webrestaurant.online/api',
+    imgUrl: 'http://webrestaurant.online/storage/app/public'
 };
 
 

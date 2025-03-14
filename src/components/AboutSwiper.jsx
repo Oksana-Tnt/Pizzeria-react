@@ -1,11 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion";
-
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { aboutSliders } from "../utils/constants";
 import { useState } from "react";

@@ -3,8 +3,6 @@ import { fetchFromDb } from "../../utils/authHelper";
 import ModalWrapper from "../ModalWrapper";
 import DishForm from "../DishForm";
 import DishItemTable from "../DishItemTable";
-import IngredientForm from "../IngredientForm";
-import NavBarDashboard from "../NavBarDashboard";
 
 const Dashboard = () => {
   const [dishes, setDishes] = useState([]);

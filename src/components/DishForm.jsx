@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchFromDb, pushToDb } from "../utils/authHelper";
 import { toast } from "react-toastify";
-import { SiTrueup } from "react-icons/si";
-import { TbRuler2Off } from "react-icons/tb";
 
 const DishForm = ({
   setModalShow,

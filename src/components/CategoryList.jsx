@@ -1,4 +1,3 @@
-import Slider from "react-slick";
 import apiConfig from "../config/apiConfig";
 
 const CategoryList = ({ data, handleCheckboxChange }) => {
