@@ -2,7 +2,7 @@ import { FiEdit } from "react-icons/fi";
 import ModalWrapper from "./ModalWrapper";
 import DeleteForm from "./DeleteForm";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import apiConfig from "config/apiConfig";
+import apiConfig from "@config/apiConfig";
 
 const DishItemTable = ({
   dishes,

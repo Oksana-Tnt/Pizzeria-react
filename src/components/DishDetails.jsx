@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import IngredientCarousel from "./IngredientCarousel";
 import { fetchFromDb } from "@utils/authHelper";
-import apiConfig from "config/apiConfig";
+import apiConfig from "@config/apiConfig";
 
 const DishDetails = ({ dish }) => {
   const [ingredients, setIngredients] = useState([]);

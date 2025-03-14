@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": "src", // Set the base directory for imports
     "paths": {
-      "@utils/*": ["utils/*"] // Map @utils to src/utils
+      "@utils/*": ["utils/*"], // Map @utils to src/utils
+       "@config/*": ["config/*"]
     }
   },
   "include": ["src"] // Include the src directory

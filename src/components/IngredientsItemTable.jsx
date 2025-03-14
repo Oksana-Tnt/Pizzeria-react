@@ -2,7 +2,7 @@ import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import DeleteForm from "./DeleteForm";
 import ModalWrapper from "./ModalWrapper";
-import apiConfig from "config/apiConfig";
+import apiConfig from "@config/apiConfig";
 
 const IngredientsItemTable = ({
   ingredients,
