@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { Suspense, useEffect, useState } from "react";
+import { getUser, isUserLoggedIn } from "@utils/authHelper";
 
 const Menu = React.lazy(() => import("./components/pages/Menu"));
 const Login = React.lazy(() => import("./components/pages/Login"));
@@ -23,19 +24,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
 
-  function getUser() {
-    const accessDataString = localStorage.getItem("access_data");
-    if (!accessDataString) return null;
-
-    const accessData = JSON.parse(accessDataString);
-
-    return accessData.user;
-  }
-
   useEffect(() => {
-    function isUserLoggedIn() {
-      return getUser() ? true : false;
-    }
     setIsLoggedIn(isUserLoggedIn());
     const user = getUser();
     if (user) {
