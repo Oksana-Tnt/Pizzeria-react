@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { fetchFromDb } from "../../utils/authHelper.js";
 import FilterList from "../FilterList";
 import DishItemCard from "../DishItemCard";
 import CategoryList from "../CategoryList";
 import SearchComponent from "../SearchComponent";
 import { useAppContextSearch } from "../context";
+import { fetchFromDb } from "../../utils/authHelper";
 
 const Menu = () => {
   const [categoriesWithDishes, setCategoriesWithDishes] = useState([]);
