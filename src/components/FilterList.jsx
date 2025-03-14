@@ -1,23 +1,9 @@
-import { useEffect, useState } from "react";
-import { FaPlus } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
 const FilterList = ({ title, data, handleCheckboxChange }) => {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    setList(data.slice(0, 9));
-  }, [data]);
-  const handleButtonPlus = () => {
-    setList(data);
-  };
-  const handleButtonMinus = () => {
-    setList(data.slice(0, 9));
-  };
   return (
     <div className="mb-4 d-flex flex-column">
       <label className="fs-4 mb-2">{title}</label>
       <div className="d-flex flex-wrap justify-content-center align-items-center flex-lg-column align-items-lg-start flex-lg-nowrap gap-2">
-        {list?.map((category) => {
+        {data?.map((category) => {
           return (
             <div key={category.id} className="d-flex gap-3 justify-center">
               <label className="custom-checkbox">
@@ -34,13 +20,6 @@ const FilterList = ({ title, data, handleCheckboxChange }) => {
             </div>
           );
         })}
-        {list.length < 10 && (
-          <FaPlus onClick={handleButtonPlus} className="text-success" />
-        )}
-
-        {list.length > 9 && (
-          <FaMinus onClick={handleButtonMinus} className="text-success" />
-        )}
       </div>
     </div>
   );
