@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import apiConfig from "../config/apiConfig";
+import apiConfig from "../config/apiConfig.js";
 import { fetchFromDb } from "../utils/authHelper.js";
 import IngredientCarousel from "./IngredientCarousel";
 
