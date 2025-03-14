@@ -1,21 +1,24 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Menu from "./components/pages/Menu";
-import Login from "./components/pages/Login";
-import Dashboard from "./components/pages/Dashboard";
-import AboutUs from "./components/pages/AboutUs";
-import Register from "./components/pages/Register";
-import { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { getUser, isUserLoggedIn } from "./utils/authHelper";
-import Home from "./components/pages/Home";
-import Orders from "./components/pages/Orders";
 
-import ProtectedUserRoute from "./components/ProtectedUserRoute";
-import Details from "./components/pages/Details";
-import DashboardLayout from "./components/pages/DashboardLayout";
-import Ingredients from "./components/pages/Ingredients";
-import Categories from "./components/pages/Categories";
-import Layout from "./components/pages/Layout";
+const Menu = React.lazy(() => import("./components/pages/Menu"));
+const Login = React.lazy(() => import("./components/pages/Login"));
+const Dashboard = React.lazy(() => import("./components/pages/Dashboard"));
+const AboutUs = React.lazy(() => import("./components/pages/AboutUs"));
+const Register = React.lazy(() => import("./components/pages/Register"));
+const Home = React.lazy(() => import("./components/pages/Home"));
+const Orders = React.lazy(() => import("./components/pages/Orders"));
+const Details = React.lazy(() => import("./components/pages/Details"));
+const DashboardLayout = React.lazy(() =>
+  import("./components/pages/DashboardLayout")
+);
+const Ingredients = React.lazy(() => import("./components/pages/Ingredients"));
+const Categories = React.lazy(() => import("./components/pages/Categories"));
+const Layout = React.lazy(() => import("./components/pages/Layout"));
+const ProtectedUserRoute = React.lazy(() =>
+  import("./components/ProtectedUserRoute")
+);
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,66 +33,67 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={setIsLoggedIn}
-              currentUser={currentUser}
-            />
-          }
-        >
-          <Route path="/" element={<Home />}>
-            Home
-          </Route>
-          <Route path="/menu" element={<Menu />}>
-            Menu
-          </Route>
-          <Route path="/menu/:id" element={<Details />}>
-            Details
-          </Route>
-          {!isLoggedIn && (
-            <>
-              <Route
-                path="/login"
-                element={
-                  <Login
-                    stateCallback={setIsLoggedIn}
-                    setCurrentUser={setCurrentUser}
-                  />
-                }
-              >
-                Login
-              </Route>
-              <Route path="/register" element={<Register />}>
-                Register
-              </Route>
-            </>
-          )}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
           <Route
-            path="/orders"
+            path="/"
             element={
-              <ProtectedUserRoute>
-                <Orders />
-              </ProtectedUserRoute>
+              <Layout
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={setIsLoggedIn}
+                currentUser={currentUser}
+              />
             }
           >
-            Orders
-          </Route>
+            <Route path="/" element={<Home />}>
+              Home
+            </Route>
+            <Route path="/menu" element={<Menu />}>
+              Menu
+            </Route>
+            <Route path="/menu/:id" element={<Details />}>
+              Details
+            </Route>
+            {!isLoggedIn && (
+              <>
+                <Route
+                  path="/login"
+                  element={
+                    <Login
+                      stateCallback={setIsLoggedIn}
+                      setCurrentUser={setCurrentUser}
+                    />
+                  }
+                >
+                  Login
+                </Route>
+                <Route path="/register" element={<Register />}>
+                  Register
+                </Route>
+              </>
+            )}
+            <Route
+              path="/orders"
+              element={
+                <ProtectedUserRoute>
+                  <Orders />
+                </ProtectedUserRoute>
+              }
+            >
+              Orders
+            </Route>
 
-          <Route path="/about" element={<AboutUs />}>
-            About Us
+            <Route path="/about" element={<AboutUs />}>
+              About Us
+            </Route>
+            <Route path="/" element={<DashboardLayout />}>
+              <Route path="/dashboard" element={<Dashboard />} />|
+              <Route path="/ingredients" element={<Ingredients />} />
+              <Route path="/categories" element={<Categories />} />
+            </Route>
           </Route>
-          <Route path="/" element={<DashboardLayout />}>
-            <Route path="/dashboard" element={<Dashboard />} />|
-            <Route path="/ingredients" element={<Ingredients />} />
-            <Route path="/categories" element={<Categories />} />
-          </Route>
-        </Route>
-      </Routes>
-      {/* <Footer /> */}
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
