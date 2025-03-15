@@ -9,7 +9,7 @@ const Logout = ({ setIsLoggedIn }) => {
     navigate("/menu");
   };
   return (
-    <button className="btn btn-outline-success" onClick={handlerLogout}>
+    <button className="btn btn-outline-success reg" onClick={handlerLogout}>
       Log out
     </button>
   );

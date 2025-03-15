@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="d-flex flex-wrap justify-content-between align-items-center py-0 px-2 border-top">
-      <p className="col-md-4 mb-0 text-body-secondary">
+      <p className="d-none d-md-block col-md-4 mb-0 text-body-md-secondary">
         © Created by Oksana Tantsiura
       </p>
 

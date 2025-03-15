@@ -10,11 +10,11 @@ const DishItemCard = ({ dish }) => {
 
   const handleAddClick = (id) => {
     addToCard(id);
-    toast("The product has been successfully removed from your cart");
+    toast("The product has been successfully added to your cart");
   };
   const handleRemoveClick = (id) => {
     removeFromCard(id);
-    toast("The product has been successfully added to your cart");
+    toast("The product has been successfully removed from your cart");
   };
   return (
     <div className="card h-100 w-100 dish_card">

@@ -9,7 +9,7 @@ const Panel = ({ children }) => {
     navigate(-1); // Go back to the previous page
   };
   return (
-    <div className="d-flex gap-2 align-items-center text-success fs-5">
+    <div className="d-flex gap-2 align-items-center text-success fs-5 p-0">
       <button
         className="button_panel text-success nav_icon"
         onClick={handleBack}

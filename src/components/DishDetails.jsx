@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import IngredientCarousel from "./IngredientCarousel";
 import { fetchFromDb } from "@utils/authHelper";
 import apiConfig from "@config/apiConfig";
+import Panel from "./Panel";
 
 const DishDetails = ({ dish }) => {
   const [ingredients, setIngredients] = useState([]);
@@ -14,7 +15,8 @@ const DishDetails = ({ dish }) => {
 
   return (
     <div className="row mb-5">
-      <div className="justify-content-center col-lg-6">
+      <div className="text-center col-lg-6">
+        {/* <Panel>{dish.name} </Panel> */}
         <img
           src={`${apiConfig.imgUrl}/${dish.img}`}
           className="object-fit-cover dish_img"

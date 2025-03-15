@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DishSlider from "../DishSlider";
 import Panel from "../Panel";
 import { fetchFromDb } from "@utils/authHelper";
+import Footer from "../Footer";
 
 const Details = () => {
   const { id } = useParams();
@@ -26,10 +27,11 @@ const Details = () => {
   return (
     <div className="section">
       <div className="container">
-        <Panel>{dish.name} </Panel>
+        {/* <Panel>{dish.name} </Panel> */}
 
         <DishDetails dish={dish} />
         <DishSlider dishes={dishes} />
+        <Footer />
       </div>
     </div>
   );

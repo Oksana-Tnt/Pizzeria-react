@@ -18,7 +18,7 @@ const IngredientCarousel = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="embla container">
+    <div className="embla">
       <h4 className="mb-3 text-center"> Ingredients: </h4>
 
       <div className="embla__viewport" ref={emblaRef}>
@@ -36,7 +36,7 @@ const IngredientCarousel = (props) => {
             </div>
           ))}
         </div>
-        {slides.length > 5 && (
+        {slides.length > 3 && (
           <div className="embla__buttons">
             <PrevButton
               onClick={onPrevButtonClick}
