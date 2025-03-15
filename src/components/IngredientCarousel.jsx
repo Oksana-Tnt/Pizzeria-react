@@ -29,14 +29,14 @@ const IngredientCarousel = (props) => {
               key={ingredient.id}
             >
               <img
-                className="embla__slide__number bg-secondary-subtle"
+                className="embla__slide__number bg-secondary-subtle mb-1"
                 src={`${apiConfig.imgUrl}/${ingredient.img}`}
               />
               <h6 className="ingredient_name">{ingredient.name} </h6>
             </div>
           ))}
         </div>
-        {slides.length > 3 && (
+        {slides.length > 4 && (
           <div className="embla__buttons">
             <PrevButton
               onClick={onPrevButtonClick}

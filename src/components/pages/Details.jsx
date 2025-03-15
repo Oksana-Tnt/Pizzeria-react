@@ -27,8 +27,6 @@ const Details = () => {
   return (
     <div className="section">
       <div className="container">
-        {/* <Panel>{dish.name} </Panel> */}
-
         <DishDetails dish={dish} />
         <DishSlider dishes={dishes} />
         <Footer />

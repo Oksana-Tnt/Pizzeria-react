@@ -14,15 +14,15 @@ const DishSlider = ({ dishes }) => {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 1,
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1020,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 3,
           initialSlide: 1,
         },

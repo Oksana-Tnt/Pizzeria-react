@@ -14,9 +14,9 @@ const DishDetails = ({ dish }) => {
   const OPTIONS = { loop: true };
 
   return (
-    <div className="row mb-5">
+    <div className="row mb-5 px-0">
       <div className="text-center col-lg-6">
-        {/* <Panel>{dish.name} </Panel> */}
+        <Panel>{dish.name} </Panel>
         <img
           src={`${apiConfig.imgUrl}/${dish.img}`}
           className="object-fit-cover dish_img"

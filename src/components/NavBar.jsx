@@ -14,7 +14,7 @@ const NavBar = ({ isLoggedIn, setIsLoggedIn, currentUser }) => {
   const location = useLocation();
   return (
     <nav className="navbar navbar-expand-md bg-body-tertiary mb-4 py-0 px-0 fixed-top">
-      <div className="container-fluid">
+      <div className="container">
         <Link className="nav-link active" aria-current="/" to="/">
           <img src="/logo.png" alt="logo" width={70} height={70} />
         </Link>
