@@ -110,7 +110,7 @@ const DishForm = ({
   return (
     <form
       onSubmit={handleSubmin}
-      className="d-flex flex-column gap-3"
+      className="d-flex flex-column gap-3 dish_form"
       encType="multipart/form-data"
     >
       <label>Ingredients</label>
@@ -167,7 +167,7 @@ const DishForm = ({
         onChange={(e) => setName(e.target.value)}
       />
       <label>Description</label>
-      <input
+      <textarea
         type="text"
         placeholder="Enter description of dish"
         className="form-control"

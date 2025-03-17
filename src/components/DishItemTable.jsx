@@ -20,13 +20,10 @@ const DishItemTable = ({
       <thead>
         <tr>
           <th>#</th>
-          <th>Image</th>
+          <th>Img</th>
           <th>Name</th>
-          <th>Description</th>
           <th>Price</th>
-          <th className="text-center" colSpan="2">
-            Action
-          </th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -39,23 +36,20 @@ const DishItemTable = ({
                   src={`${apiConfig.imgUrl}/${dish.img}`}
                   className="rounded"
                   alt={dish.name}
-                  width="100"
-                  height="100"
+                  width="50"
+                  height="50"
                 />
               </td>
               <td>{dish.name}</td>
-              <td>{dish.description}</td>
               <td>{dish.price}</td>
 
-              <td className="text-center">
+              <td className="d-flex flex-column justify-content-center align-items-center gap-2 flex-md-row action_row">
                 <button
                   className="btn btn-outline-warning"
                   onClick={() => handleUpdateButton(dish.id)}
                 >
                   <FiEdit />
                 </button>
-              </td>
-              <td className="text-center">
                 <button
                   className="btn btn-outline-danger"
                   onClick={() => handleDeleteButton(dish.id)}
@@ -63,6 +57,7 @@ const DishItemTable = ({
                   <RiDeleteBin6Line />
                 </button>
               </td>
+
               <ModalWrapper
                 show={modalShowDelete}
                 onHide={() => handleCloseDeleteModal()}

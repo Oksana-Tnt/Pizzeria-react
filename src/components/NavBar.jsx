@@ -120,7 +120,7 @@ const NavBar = ({ isLoggedIn, setIsLoggedIn, currentUser }) => {
           )}
         </div>
         <button
-          className="navbar-toggler  px-1"
+          className="navbar-toggler px-1"
           type="button"
           onClick={() => setShowMobile(true)}
         >

@@ -18,7 +18,7 @@ body {
 }
 
 .form{
-    min-width: 320px;
+    min-width: 200px;
     max-width: 700px;
 }
 
@@ -388,5 +388,10 @@ position: relative;
 @media screen and (min-width:1440px) {
     .order_button {
         width: 300px;
+    }
+}
+@media screen and (min-width:768px) {
+    .action_row {
+        height: 67.5px;
     }
 }
