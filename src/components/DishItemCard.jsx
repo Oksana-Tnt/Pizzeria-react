@@ -17,7 +17,7 @@ const DishItemCard = ({ dish }) => {
     toast("The product has been successfully removed from your cart");
   };
   return (
-    <div className="card h-100 w-100 dish_card">
+    <div className="card h-100 w-100 dish_card pb-3">
       <Link to={`/menu/${dish.dish_id}`} className="text-decoration-none">
         <img
           src={`${apiConfig.imgUrl}/${dish.dish_img}`}

@@ -61,7 +61,9 @@ const Cart = ({ setShowCart }) => {
             className="position-absolute top-0 end-0"
           />
         </div>
-        <h1 className="mb-3">{user ? user.name : "Guest"} Card </h1>
+        <h1 className="mb-3">
+          {user ? user.name.toUpperCase() : "Guest"} Card{" "}
+        </h1>
         <ul className="list-group list-group-numbered mb-5">
           {cartDishes.length > 0 ? (
             cartDishes.map((item) => (
@@ -72,13 +74,19 @@ const Cart = ({ setShowCart }) => {
                 <CartItem {...item} />
                 <RiDeleteBin6Line
                   onClick={() => removeItem(item.id)}
-                  className="del align-self-center ms-4 text-danger"
+                  className="del ms-5 text-danger"
                 />
               </li>
             ))
           ) : (
             <div className="p-5 text-center">
-              <img src={CartImg} alt="Cart" width={300} height={300} />
+              <img
+                src={CartImg}
+                alt="Cart"
+                width={300}
+                height={300}
+                className="mb-3"
+              />
               <h3>Your cart is empty.</h3>
             </div>
           )}

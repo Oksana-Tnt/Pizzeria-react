@@ -31,15 +31,15 @@ const CartItem = (item) => {
           }{" "}
           x {item.price}$
         </h5>
-        <div className="d-flex justify-content-center gap-2">
+        <div className="d-flex justify-content-start gap-2">
           <AiOutlineMinusCircle
             onClick={() => handleRemoveClick(item.id)}
-            className="del text-info"
+            className="but text-info"
           />
 
           <AiOutlinePlusCircle
             onClick={() => handleAddClick(item.id)}
-            className="del text-info"
+            className="but text-info"
           />
         </div>
       </div>

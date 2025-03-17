@@ -370,3 +370,17 @@ position: relative;
     width: 25px;
     height: 25px;
 }
+.but{
+    width: 30px;
+    height: 30px;;
+}
+@media screen and (min-width:768px) {
+    .order_button{
+        width: 250px;
+    }    
+}
+@media screen and (min-width:1440px) {
+    .order_button {
+        width: 300px;
+    }
+}

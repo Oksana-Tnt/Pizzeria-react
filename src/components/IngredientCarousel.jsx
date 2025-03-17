@@ -18,7 +18,7 @@ const IngredientCarousel = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="embla">
+    <div className="embla mb-5">
       <h4 className="mb-3 text-center"> Ingredients: </h4>
 
       <div className="embla__viewport" ref={emblaRef}>
