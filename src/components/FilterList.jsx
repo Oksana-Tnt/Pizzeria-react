@@ -15,7 +15,7 @@ const FilterList = ({ title, data, handleCheckboxChange }) => {
 
   return (
     <div className="mb-4 d-flex flex-column">
-      <label className="fs-4 mb-2">{title}</label>
+      <label className="text-center text-lg-start fs-4 mb-2">{title}</label>
       <div className="d-flex flex-wrap justify-content-center align-items-center flex-lg-column align-items-lg-start flex-lg-nowrap gap-2">
         {dataForRender?.map((category) => {
           return (

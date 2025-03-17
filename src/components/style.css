@@ -82,7 +82,7 @@ body {
 }
 
 .slick-slide{
-    min-width: 320px !important;
+    min-width: 240px !important;
 }
 .ingredient_card{
     background-color: #6c757d;
@@ -96,6 +96,7 @@ body {
     font-size: 12px;
     text-align: center;
 }
+
 @media screen and (min-width:768px) {
     .ingredient_name {
             font-size: 14px;
