@@ -108,16 +108,14 @@ const NavBar = ({ isLoggedIn, setIsLoggedIn, currentUser }) => {
           )}
           {isLoggedIn && <Logout setIsLoggedIn={setIsLoggedIn} />}
 
-          {currentUser !== "admin" && (
-            <div className="position-relative me-2">
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info-subtle text-info-emphasis">
-                {ordersQuantity()}
-              </span>
-              <button className="btn btn-outline-success">
-                <BsCart4 onClick={() => setShowCart(true)} />
-              </button>
-            </div>
-          )}
+          <div className="position-relative me-2">
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info-subtle text-info-emphasis">
+              {ordersQuantity()}
+            </span>
+            <button className="btn btn-outline-success">
+              <BsCart4 onClick={() => setShowCart(true)} />
+            </button>
+          </div>
         </div>
         <button
           className="navbar-toggler px-1"

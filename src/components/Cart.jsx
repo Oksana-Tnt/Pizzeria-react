@@ -39,7 +39,9 @@ const Cart = ({ setShowCart }) => {
 
   const handleSendOrder = () => {
     try {
-      pushToDb("orders", { user_id: user ? user.id : 1, items: orders }, true);
+      if (user) {
+        pushToDb("orders", { user_id: user.id, items: orders }, true);
+      }
       toast("The order has been successfully added");
       localStorage.removeItem("orders");
       setOrder([]);
