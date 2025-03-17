@@ -26,7 +26,7 @@ const Details = () => {
   }, [id]);
   return (
     <div className="section">
-      <div className="container">
+      <div className="container px-5 px-lg-2">
         <DishDetails dish={dish} />
         <DishSlider dishes={dishes} />
         <Footer />

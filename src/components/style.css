@@ -65,7 +65,7 @@ body {
     background-color:rgb(163, 163, 185) !important;
     border-radius: 50% !important;
 }
-.slick-prev{
+/* .slick-prev{
     display: none !important;
 }
 .slick-next {
@@ -78,7 +78,7 @@ body {
     .slick-next {
             display: block !important;
         }
-}
+} */
 
 .slick-dots{
     bottom: 0 !important;
