@@ -33,13 +33,19 @@ body {
     overflow-y: scroll;
 }
 .cart {
-    min-width: 450px;
+    width: 100wv;
     min-height: 100vh;
     background-color: white;
     position: absolute;
     right: 0;
     top:0;
     padding: 24px;
+}
+@media screen and (min-width:768px) {
+.cart{
+    width: 500px;
+}
+    
 }
 .mobile {
     min-width: 320px;
@@ -157,7 +163,7 @@ body {
     transition: ease-in-out 0.3s;
 }
 .dish_card:hover .dish_ingredients_card {
-    bottom: 50px;
+    bottom: 70px;
     opacity: 1;
     transition: ease-in-out 0.3s;
 }

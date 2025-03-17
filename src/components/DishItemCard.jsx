@@ -26,20 +26,20 @@ const DishItemCard = ({ dish }) => {
           height="200"
           className="mx-auto d-block"
         />
-        <div className="d-flex gap-3 justify-content-center dish_ingredients_card">
-          {dish.ingredients?.map((ingredient) => {
-            return (
-              <img
-                src={`${apiConfig.imgUrl}/${ingredient.ingredient_img}`}
-                width={20}
-                height={20}
-                key={ingredient.ingredient_id}
-                className="ingredients_img"
-              />
-            );
-          })}
-        </div>
       </Link>
+      <div className="d-flex gap-3 justify-content-center dish_ingredients_card">
+        {dish.ingredients?.map((ingredient) => {
+          return (
+            <img
+              src={`${apiConfig.imgUrl}/${ingredient.ingredient_img}`}
+              width={20}
+              height={20}
+              key={ingredient.ingredient_id}
+              className="ingredients_img"
+            />
+          );
+        })}
+      </div>
       <div className="card-body text-center">
         <h5 className="card-title">{dish.dish_name}</h5>
         <p className="card-text">{dish.dish_description}</p>

@@ -7,7 +7,7 @@ import CartImg from "/empty-cart.png";
 import { fetchFromDb, getUser, pushToDb } from "@utils/authHelper";
 
 const Cart = ({ setShowCart }) => {
-  const { orders, setOrder, removeItem } = useAppContextOrder();
+  const { orders, setOrder } = useAppContextOrder();
   const user = getUser();
   const [dishes, setDishes] = useState([]);
   const [cartDishes, setCartDishes] = useState([]);
@@ -51,7 +51,6 @@ const Cart = ({ setShowCart }) => {
   const totalAmount = cartDishes.reduce((acc, item) => {
     return (acc += item.quantity * item.price);
   }, 0);
-  console.log(orders);
   return (
     <div className="backdrop">
       <div className="cart">
@@ -67,24 +66,17 @@ const Cart = ({ setShowCart }) => {
         <ul className="list-group list-group-numbered mb-5">
           {cartDishes.length > 0 ? (
             cartDishes.map((item) => (
-              <li
-                className="list-group-item d-flex gap-3 align-items-center"
-                key={item.id}
-              >
+              <li className="list-group-item d-flex" key={item.id}>
                 <CartItem {...item} />
-                <RiDeleteBin6Line
-                  onClick={() => removeItem(item.id)}
-                  className="del ms-5 text-danger"
-                />
               </li>
             ))
           ) : (
-            <div className="p-5 text-center">
+            <div className="p-5 mx-auto text-center">
               <img
                 src={CartImg}
                 alt="Cart"
-                width={300}
-                height={300}
+                width={250}
+                height={250}
                 className="mb-3"
               />
               <h3>Your cart is empty.</h3>
