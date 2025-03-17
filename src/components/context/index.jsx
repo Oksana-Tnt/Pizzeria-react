@@ -52,7 +52,13 @@ export function AppWrapperOrder({ children }) {
       return updatedOrder.filter((product) => product.quantity > 0);
     });
   };
-
+  const removeItem = (id) => {
+    setOrder((prev) => {
+      return prev.filter((product) => {
+        return product.dish_id !== id;
+      });
+    });
+  };
   const isOrder = (id) => orders.some((item) => item.dish_id === id);
 
   const ordersQuantity = () => {
@@ -70,6 +76,7 @@ export function AppWrapperOrder({ children }) {
         isOrder,
         ordersQuantity,
         setOrder,
+        removeItem,
       }}
     >
       {children}

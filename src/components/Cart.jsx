@@ -1,4 +1,4 @@
-import { RiCloseLargeLine } from "react-icons/ri";
+import { RiCloseLargeLine, RiDeleteBin6Line } from "react-icons/ri";
 import { useAppContextOrder } from "./context";
 import { useEffect, useState } from "react";
 import CartItem from "./CartItem";
@@ -7,7 +7,7 @@ import CartImg from "/empty-cart.png";
 import { fetchFromDb, getUser, pushToDb } from "@utils/authHelper";
 
 const Cart = ({ setShowCart }) => {
-  const { orders, setOrder } = useAppContextOrder();
+  const { orders, setOrder, removeItem } = useAppContextOrder();
   const user = getUser();
   const [dishes, setDishes] = useState([]);
   const [cartDishes, setCartDishes] = useState([]);
@@ -51,7 +51,7 @@ const Cart = ({ setShowCart }) => {
   const totalAmount = cartDishes.reduce((acc, item) => {
     return (acc += item.quantity * item.price);
   }, 0);
-
+  console.log(orders);
   return (
     <div className="backdrop">
       <div className="cart">
@@ -66,10 +66,14 @@ const Cart = ({ setShowCart }) => {
           {cartDishes.length > 0 ? (
             cartDishes.map((item) => (
               <li
-                className="list-group-item d-flex gap-2 align-items-center"
+                className="list-group-item d-flex gap-3 align-items-center"
                 key={item.id}
               >
                 <CartItem {...item} />
+                <RiDeleteBin6Line
+                  onClick={() => removeItem(item.id)}
+                  className="del align-self-center ms-4 text-danger"
+                />
               </li>
             ))
           ) : (

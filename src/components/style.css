@@ -60,18 +60,18 @@ body {
     border-radius: 50% !important;
 }
 .slick-prev{
-    visibility: hidden;
+    display: none !important;
 }
 .slick-next {
-    visibility: hidden;
+    display: none !important;
 }
 @media screen and (min-width:768px) {
     .slick-prev {
-            visibility:visible;
+            display: block !important;
         }
-           .slick-next {
-               visibility: visible;
-           }
+    .slick-next {
+            display: block !important;
+        }
 }
 
 .slick-dots{
@@ -81,7 +81,9 @@ body {
     visibility: hidden;
 }
 
-
+.slick-slide{
+    min-width: 320px !important;
+}
 .ingredient_card{
     background-color: #6c757d;
     width: 150px;
@@ -362,4 +364,8 @@ position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.del{
+    width: 25px;
+    height: 25px;
 }

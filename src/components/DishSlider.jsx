@@ -4,51 +4,47 @@ import apiConfig from "@config/apiConfig";
 
 const DishSlider = ({ dishes }) => {
   var settings = {
-    dots: false,
-    infinite: false,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    initialSlide: 1,
-
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1440,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          initialSlide: 1,
+          vertical: false,
         },
       },
       {
-        breakpoint: 1020,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 3,
-          initialSlide: 1,
+          slidesToScroll: 1,
+          vertical: false,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          vertical: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          vertical: true,
-          verticalSwiping: true,
-          beforeChange: function (currentSlide, nextSlide) {
-            console.log("before change", currentSlide, nextSlide);
-          },
-          afterChange: function (currentSlide) {
-            console.log("after change", currentSlide);
-          },
+          infinite: true,
+          autoplay: true,
+          speed: 2000,
+          autoplaySpeed: 2000,
+          fade: true,
+          initialSlide: 0,
         },
       },
     ],

@@ -7,8 +7,8 @@ import {
 import useEmblaCarousel from "embla-carousel-react";
 
 const IngredientCarousel = (props) => {
-  const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const { slides } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel();
 
   const {
     prevBtnDisabled,
@@ -36,7 +36,7 @@ const IngredientCarousel = (props) => {
             </div>
           ))}
         </div>
-        {slides.length > 4 && (
+        {slides.length > 5 && (
           <div className="embla__buttons">
             <PrevButton
               onClick={onPrevButtonClick}

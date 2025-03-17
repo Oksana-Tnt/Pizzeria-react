@@ -3,10 +3,9 @@ import Slider from "react-slick";
 
 const SliderOrders = ({ items }) => {
   var settings = {
-    // dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 1,
     responsive: [
