@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import apiConfig from "@config/apiConfig";
 
 const DishSlider = ({ dishes }) => {
-  var settings = {
+  const settings = {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 3,
